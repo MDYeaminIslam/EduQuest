@@ -15,14 +15,20 @@ import {
   FormMessage,
 } from '@/components/ui/form';
 import Loader from '@/components/shared/Loader';
-import { createUserAccount } from '@/lib/appwrite/api';
+import { useCreateUserAccount, useSignInAccount } from '@/lib/react-query/queriesAndMutations';
 
 
 
 const SignupForm = () => {
   const { toast } = useToast(); //this is for toast message
-  const isLoading = false; //this is for loader in signUp button
 
+  // here we are using react-query for creating a new user account
+  const { mutateAsync: createUserAccount, isLoading: isCreatingUser} = useCreateUserAccount(); //this is a hook for creating a new user account
+
+  //
+  const { mutateAsync: signInAccount, isLoading: isSigningIn } = useSignInAccount();
+
+  // 1. Create a schema for your form's validation.
   const form = useForm<z.infer<typeof SignupValidation>>({
     resolver: zodResolver(SignupValidation),
     defaultValues: {
@@ -41,6 +47,17 @@ const SignupForm = () => {
     //if user is not created then exit from this function
     if(!newUser){
       return toast({ title: "Sign up failed. Please try again."});
+    }
+
+    //Getting the session from the form 
+    const session = await signInAccount({
+      email: values.email,
+      password: values.password,
+    })
+
+    //if session is not created then exit from this function showing a toast message
+    if(!session){ 
+      return toast({ title: "Sign in failed. Please try again."});
     }
 
     // const session = await signInAccount()
@@ -111,7 +128,7 @@ const SignupForm = () => {
             )}
           />
           <Button type="submit" className='shad-button_primary'>{
-            isLoading ? (
+            isCreatingUser ? (
               <div className='flex-center gap-2'>
                 <Loader/>  Loading...
               </div>

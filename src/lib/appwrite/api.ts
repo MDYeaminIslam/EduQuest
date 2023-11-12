@@ -1,6 +1,7 @@
-import { ID } from "appwrite"; //this helps to get id for the user
+import { ID, Query } from "appwrite"; //this helps to get id for the user
 import { INewUser } from "@/types";
 import { account, appwriteConfig, avatars, databases } from "./config";
+
 
 export async function createUserAccount(user: INewUser){
   try {
@@ -65,6 +66,26 @@ export async function signInAccount(user : { email: string; password: string;}){
     const session = await account.createEmailSession(user.email, user.password);
     return session;
     
+  } catch (error) {
+    console.log(error);
+  }
+}
+
+//this will get user from database
+export async function getCurrentUser(){
+  try {
+    const currentAccount = await account.get(); //this will get current user from appwrite
+
+    if(!currentAccount) throw Error; //if user is not found then throw error
+    const currentUser = await databases.listDocuments(
+      appwriteConfig.databaseId,
+      appwriteConfig.userCollectionId,
+      [Query.equal('accountId', currentAccount.$id)]
+
+    );//this will get user from database
+
+    if(!currentUser) throw Error; //if user is not found then throw error;
+    return currentUser.documents[0]; //This line returns the first document from the documents array within the currentUser object.
   } catch (error) {
     console.log(error);
   }

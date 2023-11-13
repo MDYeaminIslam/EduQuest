@@ -4,7 +4,7 @@ import { Input } from '@/components/ui/input';
 import { zodResolver } from '@hookform/resolvers/zod'; //
 import { useForm } from 'react-hook-form';
 import { SignupValidation } from '@/lib/validation';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { useToast } from "@/components/ui/use-toast";
 import {
   Form,
@@ -16,17 +16,20 @@ import {
 } from '@/components/ui/form';
 import Loader from '@/components/shared/Loader';
 import { useCreateUserAccount, useSignInAccount } from '@/lib/react-query/queriesAndMutations';
+import { useUserContext } from '@/context/AuthContext';
 
 
 
 const SignupForm = () => {
   const { toast } = useToast(); //this is for toast message
+  const { checkAuthUser, isLoading: isUserLoading } = useUserContext();
+  const navigate = useNavigate(); 
 
   // here we are using react-query for creating a new user account
-  const { mutateAsync: createUserAccount, isLoading: isCreatingUser} = useCreateUserAccount(); //this is a hook for creating a new user account
+  const { mutateAsync: createUserAccount, isPending: isCreatingAccount} = useCreateUserAccount(); //this is a hook for creating a new user account
 
   //
-  const { mutateAsync: signInAccount, isLoading: isSigningIn } = useSignInAccount();
+  const { mutateAsync: signInAccount, isPending: isSigningIn } = useSignInAccount();
 
   // 1. Create a schema for your form's validation.
   const form = useForm<z.infer<typeof SignupValidation>>({
@@ -61,6 +64,15 @@ const SignupForm = () => {
     }
 
     // const session = await signInAccount()
+
+    const isLoggedIn = await checkAuthUser(); //check if the user is logged in or not
+    if(isLoggedIn){
+      form.reset(); //reset the form
+
+      navigate('/'); //navigate to the home page
+    }else{
+      return toast({ title: "Sign up failed. Please try again."});
+    }
   }
 
   return (
@@ -128,7 +140,7 @@ const SignupForm = () => {
             )}
           />
           <Button type="submit" className='shad-button_primary'>{
-            isCreatingUser ? (
+            isCreatingAccount ? (
               <div className='flex-center gap-2'>
                 <Loader/>  Loading...
               </div>

@@ -73,15 +73,17 @@ export function AuthProvider ({ children }: { children: React.ReactNode }){
 
   //we will call checkAuthUser when the app is reloaded and for that we will use useEffect
   useEffect(() => {
+    const cookieFallback = localStorage.getItem("cookieFallback");
     if (
-      localStorage.getItem('cookieFallback') === '[]' ||
-      localStorage.getItem('cookieFallback') === null
-    )
-      navigate('/sign-in');
+      cookieFallback === "[]" ||
+      cookieFallback === null ||
+      cookieFallback === undefined
+    ) {
+      navigate("/sign-in");
+    }
 
-    checkAuthUser(); //call checkAuthUser when the app is reloaded.
+    checkAuthUser();
   }, []);
-
   //value :- This is the object that will be passed as value to the AuthContext.Provider. This object contains all the values that we want to share with the components that will be wrapped by AuthProvider.
   const value = {
     user,

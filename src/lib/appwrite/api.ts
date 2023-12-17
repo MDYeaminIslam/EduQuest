@@ -411,7 +411,7 @@ export async function searchPosts(searchTerm: string) {
       [Query.search("story", searchTerm)]
     );
 
-    if (!posts) throw Error;
+    if (!posts) return null;
 
     return posts;
   } catch (error) {

@@ -10,3 +10,4 @@ export { default as PostCard} from './PostCard';
 export { default as GridPostList} from './GridPostList';
 export { default as UserCard} from './UserCard';
 export { default as ProfileUploader} from './ProfileUploader';
+export { default as SearchResults} from './SearchResults';

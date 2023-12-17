@@ -9,7 +9,6 @@ type GridPostListProps = {
   showUser?: boolean;
   showStats?: boolean;
 };
-
 const GridPostList = ({
   posts,
   showUser = true,

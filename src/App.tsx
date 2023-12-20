@@ -16,6 +16,7 @@ import {
   UpdateProfile,
   AllUsers,
 } from "@/_root/pages";
+import Suggestion from './_root/pages/Suggestion';
 
 
 
@@ -35,7 +36,7 @@ const App = () => {
           <Route path="/explore" element={<Explore />} />
           <Route path="/saved" element={<Saved />} />
           <Route path="/all-users" element={<AllUsers />} />
-          {/* <Route path="/ai-support" element={<AISupport/>} /> */}
+          <Route path="/suggestion" element={<Suggestion/>} />
           <Route path="/create-post" element={<CreatePost />} />
           <Route path="/update-post/:id" element={<EditPost />} />
           <Route path="/posts/:id" element={<PostDetails />} />

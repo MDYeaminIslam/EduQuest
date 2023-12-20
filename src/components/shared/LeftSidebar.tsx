@@ -47,7 +47,7 @@ const LeftSidebar = () => {
               <li
                 key={link.label}
                 className={`leftsidebar-link group ${
-                  isActive && 'bg-primary-500'
+                  isActive && 'bg-primary-100'
                 }`}
                 // Here we use group so that we can use group-hover in the img tag both on image and text
               >

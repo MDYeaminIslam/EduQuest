@@ -15,6 +15,7 @@ import {
   PostDetails,
   UpdateProfile,
   AllUsers,
+  Money_management,
 } from "@/_root/pages";
 import Suggestion from './_root/pages/Suggestion';
 
@@ -37,6 +38,7 @@ const App = () => {
           <Route path="/saved" element={<Saved />} />
           <Route path="/all-users" element={<AllUsers />} />
           <Route path="/suggestion" element={<Suggestion/>} />
+          <Route path="/money_management" element={<Money_management/>}/>
           <Route path="/create-post" element={<CreatePost />} />
           <Route path="/update-post/:id" element={<EditPost />} />
           <Route path="/posts/:id" element={<PostDetails />} />

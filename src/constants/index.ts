@@ -29,6 +29,11 @@ export const sidebarLinks = [
     route: "/suggestion",
     label: "Suggestion",
   },
+  {
+    imgURL: "/assets/icons/suggestion.png",
+    route: "/money_management",
+    label: "Money_management",
+  },
 ];
 
 export const bottombarLinks = [
@@ -56,5 +61,10 @@ export const bottombarLinks = [
     imgURL: "/assets/icons/suggestion.png",
     route: "/suggestion",
     label: "Suggestion",
+  },
+  {
+    imgURL: "/assets/icons/suggestion.png",
+    route: "/money_management",
+    label: "Money_management",
   },
 ];

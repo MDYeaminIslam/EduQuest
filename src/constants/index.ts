@@ -25,12 +25,12 @@ export const sidebarLinks = [
     label: "Create Post",
   },
   {
-    imgURL: "/assets/icons/suggestion.png",
+    imgURL: "/assets/icons/suggestion.svg",
     route: "/suggestion",
     label: "Suggestion",
   },
   {
-    imgURL: "/assets/icons/suggestion.png",
+    imgURL: "/assets/icons/money_management.svg",
     route: "/money_management",
     label: "Money_management",
   },

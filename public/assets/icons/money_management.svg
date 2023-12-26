@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="32px" height="32px" viewBox="0 0 32 32" version="1.1">
+<g id="surface1">
+<path style="fill:none;stroke-width:1.176;stroke-linecap:round;stroke-linejoin:round;stroke:rgb(51.764706%,42.745098%,81.176471%);stroke-opacity:1;stroke-miterlimit:4;" d="M 9.500977 13.749023 C 9.500977 14.71875 10.250977 15.500977 11.170898 15.500977 L 13.048828 15.500977 C 13.848633 15.500977 14.499023 14.821289 14.499023 13.96875 C 14.499023 13.060547 14.100586 12.729492 13.508789 12.518555 L 10.5 11.469727 C 9.911133 11.258789 9.509766 10.939453 9.509766 10.019531 C 9.509766 9.178711 10.160156 8.490234 10.959961 8.490234 L 12.84082 8.490234 C 13.760742 8.490234 14.510742 9.269531 14.510742 10.239258 " transform="matrix(1.333333,0,0,1.333333,0,0)"/>
+<path style="fill:none;stroke-width:1.176;stroke-linecap:round;stroke-linejoin:round;stroke:rgb(51.764706%,42.745098%,81.176471%);stroke-opacity:1;stroke-miterlimit:4;" d="M 12 7.5 L 12 16.5 " transform="matrix(1.333333,0,0,1.333333,0,0)"/>
+<path style="fill:none;stroke-width:1.176;stroke-linecap:round;stroke-linejoin:round;stroke:rgb(51.764706%,42.745098%,81.176471%);stroke-opacity:1;stroke-miterlimit:4;" d="M 21.999023 12 C 21.999023 17.519531 17.519531 21.999023 12 21.999023 C 6.480469 21.999023 2.000977 17.519531 2.000977 12 C 2.000977 6.480469 6.480469 2.000977 12 2.000977 " transform="matrix(1.333333,0,0,1.333333,0,0)"/>
+<path style="fill:none;stroke-width:1.176;stroke-linecap:round;stroke-linejoin:round;stroke:rgb(51.764706%,42.745098%,81.176471%);stroke-opacity:1;stroke-miterlimit:4;" d="M 21.999023 6 L 21.999023 2.000977 L 18 2.000977 " transform="matrix(1.333333,0,0,1.333333,0,0)"/>
+<path style="fill:none;stroke-width:1.176;stroke-linecap:round;stroke-linejoin:round;stroke:rgb(51.764706%,42.745098%,81.176471%);stroke-opacity:1;stroke-miterlimit:4;" d="M 17.000977 6.999023 L 21.999023 2.000977 " transform="matrix(1.333333,0,0,1.333333,0,0)"/>
+</g>
+</svg>

@@ -55,8 +55,8 @@ function Suggestion() {
   // };
 
   return (
-    <div className="container p-6 bg-black-100 w-full min-h-screen">
-      <h1 className="text-3xl mb-6 text-white ">Choose your path</h1>
+    <div className="suggestion-container p-6 bg-black-100 w-full min-h-screen">
+      <h1 className="text-4xl mb-6 font-bold text-white ">Choose your path</h1>
 
       <div className="mb-4">
         <label htmlFor="occupation" className="block mb-2 text-white">
@@ -111,11 +111,11 @@ function Suggestion() {
       <div className="mt-6">
         {suggestions && suggestions.length > 0 && (
           <div>
-            <h2 className="text-2xl mb-2  text-center text-green-500 ">
+            <h2 className="text-4xl mb-2 font-bold text-center text-green-200 ">
               Suggestions That you need
             </h2>
             <div className='mt-5'>
-              <ol className='text-xl text-green-200'>
+              <ol className='text-xl text-white'>
                 {suggestions.map((suggestion, index) => (
                   <li key={suggestion} className="mb-1">
                     {index + 1}. {suggestion}

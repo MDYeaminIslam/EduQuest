@@ -28,9 +28,9 @@ const Money_management = () => {
       <div className="mb-4">
         <label
           htmlFor="monthlyBudget"
-          className="block text-gray-700 font-bold mb-2"
+          className="block text-green-300 font-bold mb-2 text-3xl text-center mt-4 p-4"
         >
-          Enter your monthly budget in BDT:
+          Enter your monthly budget in BDT
         </label>
         <input
           type="number"
@@ -43,28 +43,28 @@ const Money_management = () => {
 
       {monthlyBudget && budgetBreakdown && (
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-          <div className="bg-white overflow-hidden shadow-sm sm:rounded-lg">
+          <div className="bg-green-400 overflow-hidden shadow-sm sm:rounded-lg">
             <div className="p-4">
-              <h3 className="text-2xl font-bold mb-2">Essentials (50%)</h3>
-              <p className="text-gray-700">
+              <h3 className="text-2xl text-black font-bold mb-2">Essentials (50%)</h3>
+              <p className="text-black">
                 {budgetBreakdown.essentials.toFixed(2)} BDT <br />
                 Covers rent, food, utilities, transportation, etc.
               </p>
             </div>
           </div>
-          <div className="bg-white overflow-hidden shadow-sm sm:rounded-lg">
+          <div className="bg-green-400 overflow-hidden shadow-sm sm:rounded-lg">
             <div className="p-4">
-              <h3 className="text-2xl font-bold mb-2">Wants (30%)</h3>
-              <p className="text-gray-700">
+              <h3 className="text-2xl text-black font-bold mb-2">Wants (30%)</h3>
+              <p className="text-black">
                 {budgetBreakdown.wants.toFixed(2)} BDT <br />
                 Includes dining out, entertainment, shopping, etc.
               </p>
             </div>
           </div>
-          <div className="bg-white overflow-hidden shadow-sm sm:rounded-lg">
+          <div className="bg-green-400 overflow-hidden shadow-sm sm:rounded-lg">
             <div className="p-4">
-              <h3 className="text-2xl font-bold mb-2">Savings (20%)</h3>
-              <p className="text-gray-700">
+              <h3 className="text-2xl text-black font-bold mb-2">Savings (20%)</h3>
+              <p className="text-black">
                 {budgetBreakdown.savings.toFixed(2)} BDT <br />
                 For future goals, emergencies, or investments.
               </p>

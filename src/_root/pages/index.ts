@@ -10,3 +10,4 @@ export { default as LikedPosts } from "./LikedPosts";
 export { default as AllUsers } from "./AllUsers";
 export { default as Suggestion} from "./Suggestion";
 export { default as Money_management} from "./Money_management";
+export { default as FAQItem} from "./FAQItem";

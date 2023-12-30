@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import FAQItem from './FAQItem';
+import { faqsQuestions } from './FAQItem_questions';
 
 const Money_management = () => {
   const [monthlyBudget, setMonthlyBudget] = useState<number | null>(null);
@@ -35,6 +37,7 @@ const Money_management = () => {
         <input
           type="number"
           id="monthlyBudget"
+          placeholder='Enter your monthly budget in BDT'
           value={monthlyBudget === null ? '' : monthlyBudget.toString()} // Convert number to string
           onChange={handleBudgetChange}
           className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
@@ -45,7 +48,9 @@ const Money_management = () => {
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
           <div className="bg-green-400 overflow-hidden shadow-sm sm:rounded-lg">
             <div className="p-4">
-              <h3 className="text-2xl text-black font-bold mb-2">Essentials (50%)</h3>
+              <h3 className="text-2xl text-black font-bold mb-2">
+                Essentials (50%)
+              </h3>
               <p className="text-black">
                 {budgetBreakdown.essentials.toFixed(2)} BDT <br />
                 Covers rent, food, utilities, transportation, etc.
@@ -54,7 +59,9 @@ const Money_management = () => {
           </div>
           <div className="bg-green-400 overflow-hidden shadow-sm sm:rounded-lg">
             <div className="p-4">
-              <h3 className="text-2xl text-black font-bold mb-2">Wants (30%)</h3>
+              <h3 className="text-2xl text-black font-bold mb-2">
+                Wants (30%)
+              </h3>
               <p className="text-black">
                 {budgetBreakdown.wants.toFixed(2)} BDT <br />
                 Includes dining out, entertainment, shopping, etc.
@@ -63,7 +70,9 @@ const Money_management = () => {
           </div>
           <div className="bg-green-400 overflow-hidden shadow-sm sm:rounded-lg">
             <div className="p-4">
-              <h3 className="text-2xl text-black font-bold mb-2">Savings (20%)</h3>
+              <h3 className="text-2xl text-black font-bold mb-2">
+                Savings (20%)
+              </h3>
               <p className="text-black">
                 {budgetBreakdown.savings.toFixed(2)} BDT <br />
                 For future goals, emergencies, or investments.
@@ -73,16 +82,13 @@ const Money_management = () => {
         </div>
       )}
 
-      <div className="mt-4">
-        <h2 className="text-xl font-bold mb-4">References:</h2>
-        <ul className="list-disc pl-8">
-          <li>
-            <a href="https://www.nerdwallet.com/article/finance/nerdwallet-budget-calculator">
-              NerdWallet Budget Calculator
-            </a>
-          </li>
-          {/* ... other references */}
-        </ul>
+      <div className="container mx-auto px-4 mt-10">
+        <h2 className="text-2xl font-bold mb-4 text-white">FAQ</h2>
+        <div className="flex flex-1 flex-col sm:grid-cols-2 md:grid-cols-3 gap-4">
+          {faqsQuestions.map((faq) => (
+            <FAQItem key={faq.question} {...faq} />
+          ))}
+        </div>
       </div>
     </div>
   );

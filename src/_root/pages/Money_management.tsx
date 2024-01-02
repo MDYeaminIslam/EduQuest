@@ -26,7 +26,7 @@ const Money_management = () => {
   const budgetBreakdown = calculateBudgetBreakdown();
 
   return (
-    <div className="container mx-auto p-4">
+    <div className="container mx-auto p-4 overflow-scroll py-10 px-5 md:p-14 custom-scrollbar">
       <div className="mb-4">
         <label
           htmlFor="monthlyBudget"

@@ -55,7 +55,7 @@ function Suggestion() {
   // };
 
   return (
-    <div className="container mx-auto p-4">
+    <div className="container mx-auto p-4 overflow-scroll py-10 px-5 md:p-14 custom-scrollbar">
       <h1 className="block text-green-300 font-bold mb-2 text-5xl text-center mt-4 p-4">Choose your path</h1>
 
       <div className="mb-4">

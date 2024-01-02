@@ -30,17 +30,17 @@ const Money_management = () => {
       <div className="mb-4">
         <label
           htmlFor="monthlyBudget"
-          className="block text-green-300 font-bold mb-2 text-3xl text-center mt-4 p-4"
+          className="block text-green-300 font-bold mb-2 text-5xl text-center mt-4 p-4"
         >
           Enter your monthly budget in BDT
         </label>
         <input
           type="number"
           id="monthlyBudget"
-          placeholder='Enter your monthly budget in BDT'
+          placeholder='Amount in BDT'
           value={monthlyBudget === null ? '' : monthlyBudget.toString()} // Convert number to string
           onChange={handleBudgetChange}
-          className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+          className="shadow appearance-none border rounded w-full h-20 text-lg py-6 px-6 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
         />
       </div>
 

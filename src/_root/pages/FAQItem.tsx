@@ -14,11 +14,11 @@ const FAQItem: React.FC<FAQItemProps> = ({ question, answer }) => {
   };
 
   return (
-    <div className="bg-white rounded-lg shadow-md w-2/4 p-4 mb-4 flex flex-col">
-      <h3 className="text-lg font-medium text-black">{question}</h3>
+    <div className="bg-primary-300 rounded-lg shadow-md w-full p-4 mb-4 flex flex-col">
+      <h3 className="text-lg font-bold text-black">{question}</h3>
       <div className="flex items-center justify-between mt-2">
         <button
-          className="text-sm text-blue-500 hover:text-blue-700 font-medium"
+          className="text-sm text-blue-700 hover:text-black font-medium"
           type="button"
           onClick={handleToggle}
         >

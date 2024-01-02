@@ -55,8 +55,8 @@ function Suggestion() {
   // };
 
   return (
-    <div className="suggestion-container p-6 bg-black-100 w-full min-h-screen">
-      <h1 className="text-4xl mb-6 font-bold text-white ">Choose your path</h1>
+    <div className="container mx-auto p-4">
+      <h1 className="block text-green-300 font-bold mb-2 text-5xl text-center mt-4 p-4">Choose your path</h1>
 
       <div className="mb-4">
         <label htmlFor="occupation" className="block mb-2 text-white">
@@ -73,7 +73,7 @@ function Suggestion() {
           id="occupation"
           list="occupations"
           placeholder="Choose your occupation"
-          className="border p-2 w-1/4 text-black"
+          className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
           value={selectedOccupation?.label || ''} // If selectedOccupation is null, use an empty string
           onChange={handleOccupationChange}
         />
@@ -95,7 +95,7 @@ function Suggestion() {
           list="difficulties"
           placeholder="Choose your difficulty"
           disabled={!selectedOccupation}
-          className="border p-2 w-1/4 text-black"
+          className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
           value={selectedDifficulty?.level || ''} // If selectedDifficulty is null, use an empty string
           onChange={handleDifficultyChange}
         />
@@ -103,7 +103,7 @@ function Suggestion() {
 
       <button
         onClick={handleSubmit}
-        className="bg-blue-500 text-white p-2 rounded disabled:bg-gray-400 disabled:cursor-not-allowed"
+        className="bg-green-500 text-white p-2 rounded disabled:bg-gray-400 disabled:cursor-not-allowed"
       >
         Refresh
       </button>

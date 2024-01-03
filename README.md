@@ -1,28 +1,30 @@
-# React + TypeScript + Vite
+# Eduquest: Learn, Share, Grow 
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**Eduquest** is a revolutionary web-based social platform designed specifically for teenagers! It's not just another social media hangout - Eduquest empowers you to **learn new skills, share your achievements, and connect with like-minded peers** in a **fun and engaging** environment.
 
-Currently, two official plugins are available:
+**What makes Eduquest different?**
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+* **Focus on learning:** Eduquest goes beyond scrolling and connecting. We provide high-quality **learning materials** across various topics, helping you discover and develop new skills.
+* **Community-driven:** Share your **thoughts, skills, and accomplishments** with fellow students. Get **feedback, star posts you find inspiring, and save your favorites** for later reference.
+* **Personalized exploration:** Dive into the **explore section** to find content based on your interests, and let the **suggestion section** guide you towards your **dream career path**.
+* **Financial literacy:** Master the art of **money management** through dedicated resources and **FAQs**. Understand how money works and make informed financial decisions.
 
-## Expanding the ESLint configuration
+**Key features:**
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+* **User Accounts:** Create your own profile or log in with existing credentials.
+* **Sharing & Engagement:** Post your thoughts, skills, and achievements, and interact with others' content through stars, saves, and comments.
+* **Exploration & Discovery:** Search for specific topics in the explore section and receive personalized career suggestions.
+* **Financial Education:** Learn valuable money management skills and get answers to your financial questions in the dedicated section.
 
-- Configure the top-level `parserOptions` property like this:
+**Technology Stack:**
 
-```js
-   parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-   },
-```
+* **Frontend:** ReactJS with TypeScript, ShadCN, React hook, Tanstack react-query, React dropzone, React intersection-observer
+* **Backend:** Appwrite
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
-# EduQuest
+**Join Eduquest today and unlock your full potential!**
+
+**Ready to get started?**
+
+Visit our website at [insert website URL] and create your free account. Follow us on social media for updates and connect with the Eduquest community!
+
+**Let's learn, share, and grow together!**

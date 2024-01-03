@@ -21,14 +21,15 @@
 * **Frontend:** ReactJS with TypeScript, ShadCN, React hook, Tanstack react-query, React dropzone, React intersection-observer
 * **Backend:** Appwrite
 
-**Join Eduquest today and unlock your full potential!**
-
-**Ready to get started?**
-
-Visit our website at [insert website URL] and create your free account. Follow us on social media for updates and connect with the Eduquest community!
-
-**Let's learn, share, and grow together!**
-
+**Eduquest Homepage**
 ![Eduquest homepage screenshot](/public/assets/images/Home.png)
+
+**Explore page**
 ![Eduquest explore screenshot](/public/assets/images/Explore.png)
+
+**Suggestion Page**
+![Eduquest explore screenshot](/public/assets/images/Suggestions.png)
+
+**Money management**
+![Eduquest explore screenshot](/public/assets/images/Money_management.png)
 

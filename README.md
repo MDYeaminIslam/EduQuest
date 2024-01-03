@@ -28,3 +28,7 @@
 Visit our website at [insert website URL] and create your free account. Follow us on social media for updates and connect with the Eduquest community!
 
 **Let's learn, share, and grow together!**
+
+![Eduquest homepage screenshot](/public/assets/images/Home.png)
+![Eduquest explore screenshot](/public/assets/images/Explore.png)
+

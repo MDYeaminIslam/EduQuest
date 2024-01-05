@@ -51,5 +51,4 @@ const App = () => {
     </main>
   );
 };
-{/* Start to see the video from 24 minutes*/}
 export default App;

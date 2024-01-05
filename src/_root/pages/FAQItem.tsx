@@ -18,7 +18,7 @@ const FAQItem: React.FC<FAQItemProps> = ({ question, answer }) => {
       <h3 className="text-lg font-bold text-black">{question}</h3>
       <div className="flex items-center justify-between mt-2">
         <button
-          className="text-sm text-blue-700 hover:text-black font-medium"
+          className="text-sm text-white hover:text-black font-medium"
           type="button"
           onClick={handleToggle}
         >
@@ -27,7 +27,7 @@ const FAQItem: React.FC<FAQItemProps> = ({ question, answer }) => {
       </div>
       {isOpen && (
         <div className="mt-2">
-          <p className="text-base text-black">{answer}</p>
+          <p className="text-base font-semibold text-black">{answer}</p>
         </div>
       )}
     </div>

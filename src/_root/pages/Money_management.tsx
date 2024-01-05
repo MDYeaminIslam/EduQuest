@@ -83,7 +83,7 @@ const Money_management = () => {
       )}
 
       <div className="container mx-auto px-4 mt-10">
-        <h2 className="text-2xl font-bold mb-4 text-white">FAQ</h2>
+        <h2 className="text-4xl font-bold mb-4 text-green-300">FAQ :</h2>
         <div className="flex flex-1 flex-col sm:grid-cols-2 md:grid-cols-3 gap-4">
           {faqsQuestions.map((faq) => (
             <FAQItem key={faq.question} {...faq} />

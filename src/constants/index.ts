@@ -65,6 +65,6 @@ export const bottombarLinks = [
   {
     imgURL: "/assets/icons/money_management.svg",
     route: "/money_management",
-    label: "Money_management",
+    label: "Money",
   },
 ];

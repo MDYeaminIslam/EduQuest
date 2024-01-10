@@ -1,14 +1,14 @@
 import { Models } from 'appwrite';
 import { GridPostList, Loader } from '.';
 
-type DocumentList<Document = Models.Document> = {
-  total: number;
-  documents: Document[];
-};
+// type DocumentList<Document = Models.Document> = {
+//   total: number;
+//   documents: Document[];
+// };
 
 type SearchResultProps = {
   isSearchFetching: boolean;
-  searchedPosts: DocumentList;
+  searchedPosts: any;
 };
 const SearchResults = ({ isSearchFetching, searchedPosts }: SearchResultProps) => {
   if (isSearchFetching) {

@@ -4,7 +4,7 @@ import { Input } from "@/components/ui";
 import useDebounce from "@/hooks/useDebounce";
 import { GridPostList, Loader, SearchResults } from "@/components/shared";
 import { useGetPosts, useSearchPosts } from "@/lib/react-query/queriesAndMutations";
-import { Models } from 'appwrite';
+//import { Models } from 'appwrite';
 
 const Explore = () => {
   const { ref, inView } = useInView();

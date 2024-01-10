@@ -22,14 +22,14 @@ import { useUserContext } from '@/context/AuthContext';
 
 const SignupForm = () => {
   const { toast } = useToast(); //this is for toast message
-  const { checkAuthUser, isLoading: isUserLoading } = useUserContext();
+  const { checkAuthUser } = useUserContext();
   const navigate = useNavigate(); 
 
   // here we are using react-query for creating a new user account
   const { mutateAsync: createUserAccount, isPending: isCreatingAccount} = useCreateUserAccount(); //this is a hook for creating a new user account
 
   //
-  const { mutateAsync: signInAccount, isPending: isSigningIn } = useSignInAccount();
+  const { mutateAsync: signInAccount } = useSignInAccount();
 
   // 1. Create a schema for your form's validation.
   const form = useForm<z.infer<typeof SignupValidation>>({
